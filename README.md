@@ -11,33 +11,31 @@ Austin Slade Getz
 ## Usage
 The F rounding function in a feistel cipher does not need to be inversable and takes in a data block
 that is half the size of the input and a subkey. My F function must output a string of 1's and 0's
-the same length as a:
+the same length as a.
 
-''''python
-def f(a, b):
+<pre><code id="python_code">def f(a, b):
   temp = ""
-  # custom code
-  # temp += "0" or "1" len(a) times
+  &#35; custom code
+  &#35; temp += "0" or "1" len(a) times
   return temp
-''''
+</code></pre>
+
 
 Key generation is fairly simple using the rand_key function (included) and the size of the key.
 Below is an example to generate 16 random keys.
 
-''''python
-KEYS = []
+<pre><code id="python_code">KEYS = []
 KEY_SIZE = 16
 KEY_LENGTH = 128
 
 for i in range(int(KEY_SIZE)):
     KEYS.append(rand_key(KEY_LENGTH))
-''''
+</code></pre>
 
 One can customize the character encoding by choosing the size CHAR_SIZE variable. Below shows an
 example where each character is 8 bits long.
 
-''''python
-CHAR_SIZE = 8 # modified original code to be able to choose char size
+<pre><code id="python_code">CHAR_SIZE = 8 # modified original code to be able to choose char size
 for i in range(0, len(bin_data), CHAR_SIZE):
     # slicing the bin_data from index range [0, CHAR_SIZE -1]
     # and storing it in temp_data
@@ -54,14 +52,13 @@ for i in range(0, len(bin_data), CHAR_SIZE):
     # in str_data
 
     str_data = str_data + chr(decimal_data)
-''''
+</code></pre>
 
 ## Feistel Encryption
 You can choose the number of rounds by modifying the ROUNDS variable. The below example shows how
 the feistel encryption operates and the ROUNDS variable set to 16.
 
-''''python
-ROUNDS = 16
+<pre><code id="python_code">ROUNDS = 16
 for i in range(ROUNDS):
     F = f(R, KEYS[i]) # round function
     temp = exor(F, L) # exor F L
@@ -71,4 +68,4 @@ for i in range(ROUNDS):
 temp = L
 L = R
 R = temp
-''''
+</code></pre>
