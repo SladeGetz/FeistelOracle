@@ -1,4 +1,4 @@
-z Feistel Oracle
+# Feistel Oracle
 Feistel Oracle is a Python project, modified from Munshi, A., 2021. Feistel Cipher -
 GeeksforGeeks. [online] GeeksforGeeks. Available at:
 <https://www.geeksforgeeks.org/feistel-cipher/> [Accessed 13 February 2022]., that has an
