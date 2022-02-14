@@ -5,6 +5,8 @@ GeeksforGeeks. [online] GeeksforGeeks. Available at:
 encryption and decryption scheme. This project was made for education purposes. This was
 made as a way to better understand and test feistel ciphers for my intro to Cryptography class.
 
+I did not modify the rand_key, the exor nor the BinaryToDecimal function. My modifications include the ability to choose the number of keys, rounds, key length, and F rounding function. The original code used exor twice, instead of its own rounding function. I modified the binary data slicing operation to allow specified char sizes. The original code had an example of two rounds for encryption and decryption, which I modified by placing them in loops that iterate 'ROUND' times. The decryption method is the inverse of the encryption method.
+
 ## Author
 Austin Slade Getz
 
